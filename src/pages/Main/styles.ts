@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SearchForm = styled.form`
-    margin-top: 50px;
+    margin: 50px 0 30px 0;
     display: flex;
     justify-content: center; 
     align-items: stretch;
@@ -24,5 +24,46 @@ export const SearchForm = styled.form`
         margin-left: 5px;
         font-size: 17px;
         cursor: pointer;
+    }
+`
+
+export const ProductsContainer = styled.div`
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #ccc;
+    width: 80vw;     
+`
+
+export const ProductItem = styled.div`
+        margin-top: 15px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid #eee; 
+        height: 500px;
+        width: 270px;
+        margin-left: 20px;
+
+        div {
+            border: none;
+
+            img {
+                margin-bottom: 10px;
+                height: 70%;
+                width: 99%;
+            }
+        }
+
+        span {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1rem;
+            font-size: 20px;
+        }
+
     }
 `
