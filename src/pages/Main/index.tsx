@@ -16,7 +16,6 @@ const Main: React.FC = () => {
     const submitSearchHandler = async (data: FormProps) => {
         try {
             const { search } = data;
-            console.log(search)
             const apiResponse = await api.get(`/autocomplete/${search}`);
 
             console.log(apiResponse);
