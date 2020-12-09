@@ -1,20 +1,25 @@
 import React, { useState, useCallback } from 'react';
 import { useForm } from 'react-hook-form';
-// import * as Yup from 'yup'
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as Yup from 'yup'
 
 import api from '../../services/api';
 
-import { SearchForm, ProductsContainer, ProductItem } from './styles'
+import { SearchForm, ProductsContainer, ProductItem, ErrorMessage } from './styles'
 
-interface FormProps {
+const SearchSchema = Yup.object().shape({
+    search: Yup.string().required("O campo de busca precisa ser preenchido"),
+});
+
+interface IFormProps {
     search: string;
 }
 
-interface ItemsArray {
-    items: ProductsListProps[]
+interface IItemsArray {
+    items: IProductsListProps[]
 }
 
-interface ProductsListProps {
+interface IProductsListProps {
     map: {
         defaultPrice: number[];
         id: number[];
@@ -27,17 +32,19 @@ interface ProductsListProps {
 }
 
 const Main: React.FC = () => {
-    const [itemsArray, setItemsArray] = useState<ItemsArray>();
-    const { register, handleSubmit, errors } = useForm();
+    const [itemsArray, setItemsArray] = useState<IItemsArray>();
+    const { register, handleSubmit, errors } = useForm<IFormProps>({
+        resolver: yupResolver(SearchSchema)
+    });
 
-    const submitSearchHandler = useCallback(async (dataForm: FormProps) => {
+    const submitSearchHandler = useCallback(async (dataForm: IFormProps) => {
         try {
             const { search } = dataForm;
-            const { data } = await api.get<ItemsArray>(`/autocomplete/${search}`);
+            const { data } = await api.get<IItemsArray>(`/autocomplete/${search}`);
 
             setItemsArray(data);
         } catch (error) {
-            // console.log(error);
+            console.log(error);
         }
     }, [])
 
@@ -45,7 +52,7 @@ const Main: React.FC = () => {
         <>
             <SearchForm onSubmit={handleSubmit(submitSearchHandler)}>
                 <input ref={register({ required: true })} name="search" type="text" />
-                {/* {errors.search && <span>Esse campo precisa ser preenchido</span>} */}
+                {errors.search && <ErrorMessage>{errors.search.message}</ErrorMessage>}
                 <button>Buscar</button>
             </SearchForm>
             <ProductsContainer>
