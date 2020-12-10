@@ -1,46 +1,22 @@
-# Getting Started with Create React App
+# Calindra API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Descrição do projeto
 
-## Available Scripts
+O objetivo do projeto era construir uma aplicação em qualquer linguagem. A aplicação tem um input de texto e um botão **Busca** que ao ser clicado realiza uma pesquisa de produto através do consumo da mesma API usada pelo autocomplete do site do [Omelete](https://store.omelete.com.br). A reposta da API é recebida e a partir disso é construída uma view com a lista dos produtos retornados.
 
-In the project directory, you can run:
+#### Instalação e inicialização do projeto
 
-### `yarn start`
+Primeiro de tudo, precisamos instalar o NodeJS e o Yarn.
+Abaixo, podemos ir para as páginas de download e instalação das techs utlizadas:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ 1. [Node](https://nodejs.org/en/download/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+ 2. [Yarn](https://classic.yarnpkg.com/en/docs/install#windows-stable)
 
-### `yarn test`
+Após a instalação de todas as tecnologias, podemos dar início à utilização do projeto, com o seguinte código em um prompt (por exemplo cmd, Powershell, bash, etc..)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+yarn install && yarn start
+```
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+O site pode ser encontrado também no [aqui](calindrateste.netlify.app).
