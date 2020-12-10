@@ -19,4 +19,4 @@ Após a instalação de todas as tecnologias, podemos dar início à utilizaçã
 yarn install && yarn start
 ```
 
-O site pode ser encontrado também no [aqui](calindrateste.netlify.app).
+O site pode ser encontrado também [aqui](calindrateste.netlify.app).
