@@ -75,6 +75,12 @@ export const ProductItem = styled.div`
     }
 `
 
+export const ProductName = styled.p`
+    position: relative;
+    font-size: 25px;
+    left: 10%;
+`
+
 export const ErrorMessage = styled.span`
  animation: ${hide} 1s linear 2s forwards;
   visibility: visible;
