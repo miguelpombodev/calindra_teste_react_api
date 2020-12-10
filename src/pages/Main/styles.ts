@@ -7,6 +7,16 @@ to {
 `;
 
 export const SearchForm = styled.form`
+    @media (max-width: 600px) {
+        input {
+            margin-left: 15px;
+        }      
+
+        button {
+            margin-right: 10px;
+        }
+    }
+
     margin: 50px 0 30px 0;
     display: flex;
     justify-content: center; 
@@ -34,6 +44,16 @@ export const SearchForm = styled.form`
 `
 
 export const ProductsContainer = styled.div`
+    @media (max-width: 600px) {
+        display: flex;
+        flex-direction: column;        
+    }
+
+    @media (min-width: 601px) and (max-width: 1040px){
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+
     margin: 0 auto;
     display: flex;
     justify-content: center;

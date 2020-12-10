@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as Yup from 'yup'
+
 import firstLetterInUpper from '../../utils/firstLetterInUpper';
 
 import api from '../../services/api';
@@ -65,7 +66,7 @@ const Main: React.FC = () => {
                             <h3>{item.map.name}</h3>
                         </div>
                         <span>
-                            R$ {item.map.defaultPrice}
+                            R$ {item.map.defaultPrice.map(v => v.toFixed(2).toString().replace('.', ','))}
                         </span>
                     </ProductItem>
                 ))}
