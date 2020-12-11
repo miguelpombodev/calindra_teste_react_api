@@ -1,5 +1,7 @@
 # Calindra API
 
+O site pode ser encontrado também [aqui](https://calindrateste.netlify.app/) !
+
 ### Descrição do projeto
 
 O objetivo do projeto era construir uma aplicação em qualquer linguagem. A aplicação tem um input de texto e um botão **Busca** que ao ser clicado realiza uma pesquisa de produto através do consumo da mesma API usada pelo autocomplete do site do [Omelete](https://store.omelete.com.br). A reposta da API é recebida e a partir disso é construída uma view com a lista dos produtos retornados.
@@ -19,4 +21,3 @@ Após a instalação de todas as tecnologias, podemos dar início à utilizaçã
 yarn install && yarn start
 ```
 
-O site pode ser encontrado também [aqui](https://calindrateste.netlify.app/) .
