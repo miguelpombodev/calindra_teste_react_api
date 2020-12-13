@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { shade } from 'polished'
 
 const hide = keyframes`
 to {
@@ -40,6 +41,11 @@ export const SearchForm = styled.form`
         margin-left: 5px;
         font-size: 17px;
         cursor: pointer;
+
+        &:hover{
+            background-color: ${shade(0.05, '#ffbe00')};
+            transition: .3s linear;
+        }
     }
 `
 
